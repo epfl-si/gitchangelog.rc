@@ -43,8 +43,10 @@ How to make it work with your repository ?
 - have the .gitchangelog.rc in the root folder. Please choose your method :
     - or by getting as a static file
       `curl -sSL https://raw.githubusercontent.com/jdelasoie/gitchangelog.rc/master/.gitchangelog.rc`
-    - or by using git submodule
-    https://stackoverflow.com/questions/7597748/linking-a-single-file-from-another-git-repository
+    - or by using [a git submodule link](https://stackoverflow.com/questions/7597748/linking-a-single-file-from-another-git-repository)
+    ```git submodule add git@github.com:jdelasoie/gitchangelog.rc.git .gitchangelog
+    ln -s .gitchangelog/.gitchangelog.rc .gitchangelog.rc
+    ```
 
 ## Usage
 After committing, go into your project folder and run
