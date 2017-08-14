@@ -60,24 +60,25 @@ Everything that is not between a tag will be put in the "Unreleased" section.
 
 ### with a tag
 Say you are happy with the state of the last commit and want to tag it. If you want to include the changed changelog into the tag, do
-
-`git tag x.x`
-`gitchangelog`
-`git add CHANGELOG.md && git commit -m "chg: pkg: Update changelog"`
-`git tag --delete x.x`
-`git tag x.x`
-
+```
+git tag x.x
+gitchangelog
+git add CHANGELOG.md && git commit -m "chg: pkg: Update changelog"
+git tag --delete x.x
+git tag x.x
+```
 
 ## Commit message format
 `ACTION: [AUDIENCE:] COMMIT_MSG [!TAG ...]`
 
 ### Examples
-`new: usr: support of git implemented`
-`chg: re-indentend some lines !cosmetic`
-`fix: pkg: updated year of licence coverage.`
-`new: test: added a bunch of test around user usability of feature X.`
-`fix: typo in spelling my name in comment. !minor`
-
+```
+new: usr: support of git implemented
+chg: re-indentend some lines !cosmetic
+fix: pkg: updated year of licence coverage.
+new: test: added a bunch of test around user usability of feature X.
+fix: typo in spelling my name in comment. !minor
+```
 
 ### ACTION
 What the change is about
