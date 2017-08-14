@@ -41,9 +41,9 @@ How to make it work with your repository ?
 - at least one tag and his description in the `CHANGELOG.md` ([look here for inspiration](https://raw.githubusercontent.com/jdelasoie/gitchangelog.rc/03e5e8a3d8d5748ebcc39b9cdeafaadba2f20d94/CHANGELOG.md))
 
 - have the .gitchangelog.rc in the root folder. Please choose your method :
-    - or by getting as a static file
+    - by getting as a static file
       `curl -sSL https://raw.githubusercontent.com/jdelasoie/gitchangelog.rc/master/.gitchangelog.rc`
-    - or by using [a git submodule link](https://stackoverflow.com/questions/7597748/linking-a-single-file-from-another-git-repository)
+    - by using [a git submodule link](https://stackoverflow.com/questions/7597748/linking-a-single-file-from-another-git-repository)
     ```git submodule add git@github.com:jdelasoie/gitchangelog.rc.git .gitchangelog
     ln -s .gitchangelog/.gitchangelog.rc .gitchangelog.rc
     ```
@@ -72,7 +72,7 @@ Say you are happy with the state of the last commit and want to tag it. If you w
 `ACTION: [AUDIENCE:] COMMIT_MSG [!TAG ...]`
 
 ### Examples
-`new: usr: support of bazaar implemented`
+`new: usr: support of git implemented`
 `chg: re-indentend some lines !cosmetic`
 `fix: pkg: updated year of licence coverage.`
 `new: test: added a bunch of test around user usability of feature X.`
@@ -92,11 +92,11 @@ for bug fixes
 
 ### AUDIENCE
 
+#### `usr:`
+for final users (UI changes). The only audience that are changelogged at the moment.
+
 #### `dev:`
 for developpers (API changes, refactors...)
-
-#### `usr:`
-for final users (UI changes)
 
 #### `pkg:`
 packaging changes
@@ -109,7 +109,7 @@ doc only changes
 
 ### TAG
 
-Making a change invisible
+Adding useful informations to your messages
 
 #### `!refactor`
 
