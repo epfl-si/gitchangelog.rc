@@ -42,10 +42,12 @@ How to make it work with your repository ?
 - at least one tag and his description in the `CHANGELOG.md` ([look here for inspiration](https://raw.githubusercontent.com/jdelasoie/gitchangelog.rc/03e5e8a3d8d5748ebcc39b9cdeafaadba2f20d94/CHANGELOG.md))
 
 - have the .gitchangelog.rc in the root folder. Please choose your method :
-    - or by getting as a static file
+    - by getting as a static file
       `curl -sSL https://raw.githubusercontent.com/jdelasoie/gitchangelog.rc/master/.gitchangelog.rc`
-    - or by using git submodule
-    https://stackoverflow.com/questions/7597748/linking-a-single-file-from-another-git-repository
+    - by using [a git submodule link](https://stackoverflow.com/questions/7597748/linking-a-single-file-from-another-git-repository)
+    ```git submodule add git@github.com:jdelasoie/gitchangelog.rc.git .gitchangelog
+    ln -s .gitchangelog/.gitchangelog.rc .gitchangelog.rc
+    ```
 
 ## Usage
 After committing, go into your project folder and run
@@ -59,24 +61,25 @@ Everything that is not between a tag will be put in the "Unreleased" section.
 
 ### with a tag
 Say you are happy with the state of the last commit and want to tag it. If you want to include the changed changelog into the tag, do
-
-`git tag x.x`
-`gitchangelog`
-`git add CHANGELOG.md && git commit -m "chg: pkg: Update changelog"`
-`git tag --delete x.x`
-`git tag x.x`
-
+```
+git tag x.x
+gitchangelog
+git add CHANGELOG.md && git commit -m "chg: pkg: Update changelog"
+git tag --delete x.x
+git tag x.x
+```
 
 ## Commit message format
 `ACTION: [AUDIENCE:] COMMIT_MSG [!TAG ...]`
 
 ### Examples
-`new: usr: support of bazaar implemented`
-`chg: re-indentend some lines !cosmetic`
-`fix: pkg: updated year of licence coverage.`
-`new: test: added a bunch of test around user usability of feature X.`
-`fix: typo in spelling my name in comment. !minor`
-
+```
+new: usr: support of git implemented
+chg: re-indentend some lines !cosmetic
+fix: pkg: updated year of licence coverage.
+new: test: added a bunch of test around user usability of feature X.
+fix: typo in spelling my name in comment. !minor
+```
 
 ### ACTION
 What the change is about
@@ -90,6 +93,9 @@ for refactor, small improvement, cosmetic changes...
 for bug fixes
 
 ### AUDIENCE
+
+#### `usr:`
+for final users (UI changes). The only audience that are changelogged at the moment.
 
 #### `dev:`
 for developpers (API changes, refactors...)
@@ -108,7 +114,7 @@ doc only changes
 
 ### TAG
 
-Making a change invisible
+Adding useful informations to your messages and making it invisible
 
 #### `!refactor`
 
