@@ -21,11 +21,12 @@ keepachangelog.com
     1.0.0+build.3.ea34fd5c
     1.0.0-beta.3+build.20.f42cbd56
 
-### rule of thumb
+### rules of thumb
 
-- Add `user:` or `usr:` to your commit message to appear in `CHANGELOG.md`
-- Every log between tags are changelogged to a specific version
-- The "unreleased" section is dynamically generated for what is not tagged (pull request compatibility)
+- Add `user:` or `usr:` to your commit message to appear in `CHANGELOG.md`, but don't use any tag
+- at least, First the action (`new:`, ...), then the audience (`user:`, ...)
+- Every log between last tags (and only last two tags) are changelogged to a specific version. So you won't lose your current changelog, the new informations are added to the current.
+- The "unreleased" section is dynamically generated for what is not tagged. So you can merge pull requests without any fear, the changelog should manage it.
 
 ## Install
 
@@ -93,7 +94,7 @@ for bug fixes
 #### `dev:`
 for developpers (API changes, refactors...)
 
-#### `usr:`
+#### `usr:` or `user:`
 for final users (UI changes)
 
 #### `pkg:`
