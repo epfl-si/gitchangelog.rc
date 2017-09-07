@@ -64,7 +64,7 @@ Say you are happy with the state of the last commit and want to tag it. If you w
 ```
 git tag x.x
 gitchangelog
-git add CHANGELOG.md && git commit -m "chg: pkg: Update changelog"
+git add CHANGELOG.md && git commit -m "chg: pkg: Update changelog post tagging"
 git tag --delete x.x
 git tag x.x
 ```
