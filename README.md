@@ -2,8 +2,10 @@
 
 ## Concept
 ### What is all about
-keepachangelog.com
-[gitchangelog](https://pypi.python.org/pypi/gitchangelog)
+- keepachangelog.com
+- [gitchangelog](https://pypi.python.org/pypi/gitchangelog)
+- [cheatsheet for current implementation](https://raw.githubusercontent.com/epfl-idevelop/gitchangelog.rc/master/cheatsheet_gitchangelog.pdf) (from https://www.cheatography.com/)
+
 
 ### How to Git Tag
 *major*.*minor*.*patch*[-*prerelease*][+*build*]
