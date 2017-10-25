@@ -132,6 +132,6 @@ for cosmetic driven change (re-indentation, 80-col...)
 for partial functionality but complete subfunctionality
 
 ## Example
-[From mediatheque changelog](https://github.com/epfl-idevelop/site-diffusion-mediatheque/blob/feature/gitchangelog/CHANGELOG.md)
+[From mediatheque changelog](https://raw.githubusercontent.com/epfl-idevelop/site-diffusion-mediatheque/master/CHANGELOG.md)
 or
 [from gitchangelog project, "sample" part](https://pypi.python.org/pypi/gitchangelog)
