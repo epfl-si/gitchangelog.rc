@@ -48,7 +48,7 @@ How to make it work with your repository ?
       `curl -sSL https://raw.githubusercontent.com/jdelasoie/gitchangelog.rc/master/.gitchangelog.rc`
     - by using [a git submodule link](https://stackoverflow.com/questions/7597748/linking-a-single-file-from-another-git-repository)
     ```
-    git submodule add git@github.com:jdelasoie/gitchangelog.rc.git .gitchangelog
+    git submodule add git@github.com:epfl-idevelop/gitchangelog.rc.git .gitchangelog
     ln -s .gitchangelog/.gitchangelog.rc .gitchangelog.rc
     ```
 
