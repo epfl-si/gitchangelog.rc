@@ -25,7 +25,7 @@
 
 ### rules of thumb
 
-- Add `user:` or `usr:` to your commit message to appear in `CHANGELOG.md`, but don't use any tag
+- By default, adding `user:` or `usr:` to your commit message and not using any tag let you appear in `CHANGELOG.md`.
 - at least, First the action (`new:`, ...), then the audience (`user:`, ...)
 - Every log between last tags (and only last two tags) are changelogged to a specific version. So you won't lose your current changelog, the new informations are added to the current.
 - The "unreleased" section is dynamically generated for what is not tagged. So you can merge pull requests without any fear, the changelog should manage it.
@@ -47,7 +47,8 @@ How to make it work with your repository ?
     - by getting as a static file
       `curl -sSL https://raw.githubusercontent.com/jdelasoie/gitchangelog.rc/master/.gitchangelog.rc`
     - by using [a git submodule link](https://stackoverflow.com/questions/7597748/linking-a-single-file-from-another-git-repository)
-    ```git submodule add git@github.com:jdelasoie/gitchangelog.rc.git .gitchangelog
+    ```
+    git submodule add git@github.com:jdelasoie/gitchangelog.rc.git .gitchangelog
     ln -s .gitchangelog/.gitchangelog.rc .gitchangelog.rc
     ```
 
